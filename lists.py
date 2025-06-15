@@ -60,6 +60,8 @@ for item in range(len(substitute_menu)):
 
 
 #List Comprehension
+# Expression : newlist = [expression for item in iterable if condition == True]
+
 veg_dishes = ['spinach pasta', 'mushroom risotto', 'margherita pizza', 'eggplant parmesan', 'vegetable lasagna']
 veg_dishes_copy_1 = [x for x in veg_dishes]
 veg_dishes_copy_2 = [x for x in veg_dishes if 'a' in x]
@@ -67,3 +69,40 @@ veg_dishes_copy_3 = [x for x in veg_dishes if 'a' not in x]
 print('Vegeterian Dish 1',veg_dishes_copy_1)
 print('Vegeterian Dish 2',veg_dishes_copy_2)
 print('Vegeterian Dish 3',veg_dishes_copy_3)
+
+#Sorting
+fruit_juices = ['apple juice', 'Orange juice', 'grape juice', 'Pineapple juice', 'mango juice', 'cranberry juice', 'Strawberry juice', 'pomegranate juice']
+print("Fruit juices:", fruit_juices)
+
+fruit_juices.sort()
+print("Sorted Fruit Juices:",fruit_juices) #Ascending
+
+fruit_juices.sort(reverse= True)
+print("Sorted Fruit Juices:",fruit_juices) #Descending
+
+fruit_juices.sort(key = str.lower)
+print("Sorted Fruit Juices:",fruit_juices)
+
+fruit_juices.reverse()
+print("Sorted Fruit Juices:",fruit_juices) #Descending
+
+#Copy and Join
+
+desserts_1 = ['chocolate cake', 'ice cream', 'apple pie', 'cheesecake', 'brownies']
+desserts_copy_1 = desserts_1.copy()
+print(desserts_copy_1)
+desserts_copy_2 = list(desserts_1)
+print(desserts_copy_2)
+desserts_copy_3 = desserts_1[:]
+print(desserts_copy_3)
+
+desserts_2 = ['tiramisu', 'creme brulee', 'banana split', 'pudding', 'fruit tart']
+desserts = desserts_1 + desserts_2
+print(desserts)
+for x in desserts_2:
+    desserts_copy_1.append(x)
+print(desserts_copy_1)
+desserts_copy_2.extend(desserts_2)
+print(desserts_copy_2)
+
+
